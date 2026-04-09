@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  
+  <head>
+    <meta name="referrer" content="no-referrer">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kliksit | Web Development & AI Automation Agency in Cluj-Napoca</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: blob:; img-src * data: blob:;">
+    <meta name="description" content="Kliksit is a digital agency in Cluj-Napoca specializing in custom web development, AI automation, digital marketing, and branding for ambitious businesses." />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Kliksit Digital Agency" />
+    <meta property="og:title" content="Kliksit | Web Development & AI Automation Agency in Cluj-Napoca" />
+    <meta property="og:description" content="Kliksit is a digital agency in Cluj-Napoca specializing in custom web development, AI automation, digital marketing, and branding for ambitious businesses." />
+    <meta property="og:url" content="https://kliksit.me/" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kliksit | Web Development & AI Automation Agency in Cluj-Napoca" />
+    <meta name="twitter:description" content="Kliksit is a digital agency in Cluj-Napoca specializing in custom web development, AI automation, digital marketing, and branding for ambitious businesses." />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://kliksit.me/" />
+
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href="https://kliksit.me/" />
+    <link rel="alternate" hreflang="ro" href="https://kliksit.me/ro/" />
+    <link rel="alternate" hreflang="x-default" href="https://kliksit.me/" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Kliksit",
+      "url": "https://kliksit.me",
+      "description": "Kliksit is a digital agency in Cluj-Napoca specializing in custom web development, AI automation, digital marketing, and branding for ambitious businesses.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cluj-Napoca",
+        "addressCountry": "RO"
+      },
+      "sameAs": [
+        "https://instagram.com/kliksit",
+        "https://twitter.com/kliksit",
+        "https://linkedin.com/company/kliksit"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Kliksit",
+      "url": "https://kliksit.me",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://kliksit.me/blog?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Kliksit Digital Agency",
+      "url": "https://kliksit.me",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cluj-Napoca",
+        "addressRegion": "Cluj",
+        "addressCountry": "RO"
+      },
+      "openingHours": "Mo-Fr 09:00-18:00",
+      "priceRange": "$$"
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Playfair Display', 'serif'],
+            },
+            colors: {
+              background: '#09090b',
+              surface: '#18181b',
+              primary: '#fafafa',
+              secondary: '#a1a1aa',
+            },
+            animation: {
+              'spin-slow': 'spin 12s linear infinite',
+              'marquee': 'marquee 25s linear infinite',
+            },
+            keyframes: {
+              marquee: {
+                '0%': { transform: 'translateX(0%)' },
+                '100%': { transform: 'translateX(-100%)' },
+              }
+            }
+          },
+        },
+      };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background-color: #09090b;
+        color: #fafafa;
+        overflow-x: hidden;
+        cursor: none;
+      }
+      a, button, [role="button"], input, textarea {
+        cursor: none;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+      .no-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "@emailjs/browser": "https://esm.sh/@emailjs/browser@4.4.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

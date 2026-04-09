@@ -1,0 +1,1071 @@
+
+/* === Wudo Blog Base Styles (fallback) === */
+.wudo-blog-container, .wudo-blog-article { max-width: 900px; margin: 0 auto; line-height: 1.8; color: var(--text, #1a1a1a); font-family: var(--body-font, inherit); }
+.wudo-blog-header { margin-bottom: 2rem; }
+.wudo-blog-meta { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; font-size: 0.9em; color: var(--text, #6b7280); opacity: 0.8; }
+.wudo-blog-reading-time { font-size: 0.9em; opacity: 0.7; }
+
+/* Author */
+.wudo-blog-author { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; }
+.wudo-blog-author-card { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.25rem; border-radius: 12px; background: var(--bg-card, rgba(0,0,0,0.03)); border: 1px solid var(--border, #e2e8f0); }
+.wudo-blog-author-avatar { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; background: var(--primary, #1a1a1a); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem; flex-shrink: 0; }
+.wudo-blog-author-info { display: flex; flex-direction: column; }
+.wudo-blog-author-name { font-weight: 600; }
+.wudo-blog-author-bio { font-size: 0.85em; opacity: 0.7; }
+
+/* Table of Contents */
+.wudo-blog-toc { background: var(--bg-card, rgba(0,0,0,0.03)); border: 1px solid var(--border, #e2e8f0); border-radius: 12px; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+.wudo-blog-toc-title { font-weight: 700; font-size: 1.1em; margin-bottom: 0.75rem; }
+.wudo-blog-toc-toggle { cursor: pointer; font-size: 0.9em; color: var(--primary, #1a1a1a); background: none; border: none; padding: 0; }
+.wudo-blog-toc ol, .wudo-blog-toc ul { list-style: decimal; padding-left: 1.5rem; margin: 0; }
+.wudo-blog-toc li { margin-bottom: 0.4rem; }
+.wudo-blog-toc a { color: var(--text, #1a1a1a); text-decoration: none; }
+.wudo-blog-toc a:hover { color: var(--primary, #1a1a1a); text-decoration: underline; }
+
+/* Sections */
+.wudo-blog-section { margin-bottom: 2.5rem; }
+.wudo-blog-section-divider { border: none; height: 1px; background: var(--border, #e2e8f0); margin: 2.5rem 0; }
+
+/* Callouts */
+.wudo-blog-callout { padding: 1.25rem 1.5rem; border-radius: 12px; margin: 1.5rem 0; background: var(--bg-card, rgba(0,0,0,0.03)); border-left: 4px solid var(--primary, #1a1a1a); }
+.wudo-blog-callout-title { font-weight: 700; margin-bottom: 0.5rem; }
+.wudo-blog-callout-content { font-size: 0.95em; }
+.wudo-blog-callout.tip { border-left-color: var(--primary, #1a1a1a); }
+.wudo-blog-callout.warning { border-left-color: var(--primary, #1a1a1a); }
+.wudo-blog-callout.pro-tip { border-left-color: var(--accent, #2d2d2d); }
+.wudo-blog-callout-accent { padding: 1.25rem 1.5rem; border-radius: 12px; margin: 1.5rem 0; background: var(--bg-card, rgba(0,0,0,0.03)); border-left: 4px solid var(--accent, #2d2d2d); }
+
+/* Stat Cards — children inherit color from parent so dark-bg cards get white text automatically */
+.wudo-blog-stat-card { background: var(--bg-card, rgba(0,0,0,0.03)); border: 1px solid var(--border, #e2e8f0); border-radius: 12px; padding: 1.5rem; text-align: center; margin: 1rem 0; }
+.wudo-blog-stat-number { font-size: 2.5rem; font-weight: 800; color: inherit; line-height: 1.2; }
+.wudo-blog-stat-label { font-size: 1rem; margin-top: 0.5rem; color: inherit; opacity: 0.9; }
+.wudo-blog-stat-source { font-size: 0.75rem; color: inherit; opacity: 0.6; margin-top: 0.25rem; }
+.wudo-blog-stat-source a { color: inherit; text-decoration: underline; }
+.wudo-blog-stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+
+/* Pull Quote */
+.wudo-blog-pull-quote { font-size: 1.3em; font-style: italic; padding: 1.5rem 2rem; margin: 2rem 0; border-left: 4px solid var(--accent, #2d2d2d); background: var(--bg-card, rgba(0,0,0,0.03)); border-radius: 0 12px 12px 0; }
+.wudo-blog-quote { font-size: 1.3em; font-style: italic; padding: 1.5rem 2rem; margin: 2rem 0; border-left: 4px solid var(--accent, #2d2d2d); background: var(--bg-card, rgba(0,0,0,0.03)); border-radius: 0 12px 12px 0; }
+
+/* Data Tables */
+.wudo-blog-data-table, .wudo-blog-comparison-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95em; }
+.wudo-blog-data-table th, .wudo-blog-comparison-table th { background: var(--primary, #1a1a1a); color: #fff; padding: 0.75rem 1rem; text-align: left; font-weight: 600; }
+.wudo-blog-data-table td, .wudo-blog-comparison-table td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border, #e2e8f0); }
+.wudo-blog-data-table tr:hover, .wudo-blog-comparison-table tr:hover { background: var(--bg-card, rgba(0,0,0,0.03)); }
+.wudo-blog-table-wrapper { margin: 1.5rem 0; border-radius: 12px; border: 1px solid var(--border, #e2e8f0); }
+
+/* FAQ Accordion */
+.wudo-blog-faq-section { margin: 2.5rem 0; }
+.wudo-blog-faq-container { margin: 1rem 0; }
+.wudo-blog-faq-item { border: 1px solid var(--border, #e2e8f0); border-radius: 10px; margin-bottom: 0.75rem; overflow: hidden; }
+.wudo-blog-faq-question, .faq-question { padding: 1rem 1.25rem; cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card, rgba(0,0,0,0.03)); transition: background 0.2s; border: none; width: 100%; text-align: left; font-size: inherit; color: var(--text, #1a1a1a); }
+.wudo-blog-faq-question:hover, .faq-question:hover { background: rgba(0,0,0,0.06); }
+.wudo-blog-faq-icon { transition: transform 0.3s; font-size: 1.2em; flex-shrink: 0; margin-left: 0.5rem; }
+.wudo-blog-faq-answer, .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; padding: 0 1.25rem; }
+.wudo-blog-faq-answer.open, .faq-answer.open, .wudo-blog-faq-item.active .wudo-blog-faq-answer, .wudo-blog-faq-item.active .faq-answer { max-height: 2000px; padding: 0.75rem 1.25rem 1.25rem; }
+.wudo-blog-faq-answer p, .faq-answer p { margin: 0.5rem 0; }
+
+/* CTA */
+.wudo-blog-cta { text-align: center; padding: 2rem 1.5rem; margin: 2rem 0; background: linear-gradient(135deg, var(--primary, #1a1a1a), var(--accent, #2d2d2d)); border-radius: 16px; color: #fff; }
+.wudo-blog-cta-title { font-size: 1.5em; font-weight: 700; margin-bottom: 0.75rem; }
+.wudo-blog-button, .wudo-blog-cta-button { display: inline-block; padding: 0.75rem 2rem; background: var(--accent, #2d2d2d); color: #fff; font-weight: 600; text-decoration: none; border-radius: 8px; transition: transform 0.2s, box-shadow 0.2s; border: none; cursor: pointer; font-size: 1rem; }
+.wudo-blog-button:hover, .wudo-blog-cta-button:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+.wudo-blog-download-btn { display: inline; color: var(--primary, #1a1a1a) !important; text-decoration: underline; font-weight: 600; background: none; padding: 0; border: none; border-radius: 0; box-shadow: none; }
+
+/* Product Cards */
+.wudo-blog-product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+.wudo-blog-product-card { border: 1px solid var(--border, #e2e8f0); border-radius: 12px; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; }
+.wudo-blog-product-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+.wudo-blog-product-card img { width: 100%; height: 200px; object-fit: cover; }
+.wudo-blog-product-info { padding: 1rem; }
+.wudo-blog-product-title { font-weight: 600; margin-bottom: 0.25rem; }
+.wudo-blog-product-price { color: var(--primary, #1a1a1a); font-weight: 700; font-size: 1.1em; }
+
+/* Interactive Elements — generic */
+.wudo-blog-interactive { margin: 2rem 0; padding: 1.5rem; border-radius: 16px; background: var(--bg-card, rgba(0,0,0,0.03)); border: 1px solid var(--border, #e2e8f0); }
+.wudo-blog-quiz { margin: 2rem 0; }
+.wudo-blog-quiz-option { display: block; width: 100%; padding: 0.75rem 1rem; margin: 0.5rem 0; background: var(--bg-card, rgba(0,0,0,0.03)); border: 1px solid var(--border, #e2e8f0); border-radius: 8px; cursor: pointer; text-align: left; transition: background 0.2s; }
+.wudo-blog-quiz-option:hover { background: rgba(0,0,0,0.06); }
+.wudo-blog-quiz-option.correct { background: rgba(0,0,0,0.06); border-color: var(--primary, #1a1a1a); font-weight: 600; }
+.wudo-blog-quiz-option.incorrect { background: rgba(0,0,0,0.02); border-color: var(--border, #e2e8f0); opacity: 0.6; }
+
+/* Interactive Element — Multi-step wizard/selector */
+.wudo-blog-interactive-element { margin: 2.5rem 0; padding: 2rem; border-radius: 16px; background: var(--bg-card, #f8f9fa); border: 1px solid var(--border, #e2e8f0); box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+.wudo-blog-interactive-intro-heading { text-align: center; font-weight: 700; font-size: 1.4em; margin-bottom: 0.5rem; color: var(--text, #1a1a1a); }
+.wudo-blog-intro { text-align: center; margin-bottom: 1.5rem; color: var(--text, #1a1a1a); opacity: 0.8; font-size: 0.95em; }
+/* Progress bar */
+.wudo-blog-progress-bar-container { width: 100%; height: 4px; background: var(--border, #e2e8f0); border-radius: 2px; margin-bottom: 1.5rem; overflow: hidden; }
+.wudo-blog-progress-bar { height: 100%; background: var(--accent, #2d2d2d); border-radius: 2px; transition: width 0.4s ease; }
+/* Steps */
+.wudo-blog-step { display: none; }
+.wudo-blog-step.active { display: block; animation: wudoFadeIn 0.3s ease; }
+@keyframes wudoFadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.wudo-blog-step h3, .wudo-blog-step h4 { margin-bottom: 1rem; color: var(--text, #1a1a1a); }
+/* Options grid */
+.wudo-blog-options-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1rem 0; }
+/* Option cards */
+.wudo-blog-option-card { padding: 1.25rem; border: 2px solid var(--border, #e2e8f0); border-radius: 12px; cursor: pointer; transition: all 0.2s ease; background: #fff; text-align: center; }
+.wudo-blog-option-card:hover { border-color: var(--accent, #2d2d2d); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+.wudo-blog-option-card.selected { border-color: var(--accent, #2d2d2d); background: var(--bg-card, #f0f7ec); box-shadow: 0 0 0 1px var(--accent, #2d2d2d); }
+.wudo-blog-option-card .option-emoji, .wudo-blog-option-card .wudo-blog-option-emoji { font-size: 2rem; display: block; margin-bottom: 0.5rem; }
+.wudo-blog-option-card .option-title, .wudo-blog-option-card .wudo-blog-option-title { font-weight: 600; font-size: 1em; display: block; margin-bottom: 0.25rem; }
+.wudo-blog-option-card .option-desc, .wudo-blog-option-card .wudo-blog-option-desc { font-size: 0.85em; opacity: 0.7; display: block; }
+/* Choice explanation (collapsible) */
+.wudo-blog-choice-explanation { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease, margin 0.3s ease; padding: 0 1rem; margin: 0; border-radius: 8px; background: var(--bg-card, rgba(0,0,0,0.03)); }
+.wudo-blog-choice-explanation.visible { max-height: 500px; padding: 1rem; margin: 1rem 0; }
+/* Controls (prev/next buttons) */
+.wudo-blog-interactive-controls { display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; gap: 1rem; }
+.wudo-blog-interactive-controls button { padding: 0.6rem 1.5rem; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 0.95em; transition: all 0.2s ease; }
+.wudo-blog-interactive-controls button:first-child { background: var(--bg-card, #f0f0f0); color: var(--text, #1a1a1a); }
+.wudo-blog-interactive-controls button:first-child:hover { background: var(--border, #e2e8f0); }
+.wudo-blog-interactive-controls button:last-child { background: var(--accent, #2d2d2d); color: #fff; }
+.wudo-blog-interactive-controls button:last-child:hover { opacity: 0.9; transform: translateY(-1px); }
+.wudo-blog-interactive-controls button:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+/* Results */
+.wudo-blog-interactive-results { display: none; animation: wudoFadeIn 0.3s ease; }
+.wudo-blog-interactive-results.active { display: block; }
+.wudo-blog-result-content { padding: 1rem 0; }
+.wudo-blog-result-section { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card, rgba(0,0,0,0.03)); border-radius: 12px; border: 1px solid var(--border, #e2e8f0); }
+.wudo-blog-result-section h4 { margin-bottom: 0.75rem; color: var(--text, #1a1a1a); }
+.wudo-blog-result-section ul { padding-left: 1.5rem; }
+.wudo-blog-result-section li { margin-bottom: 0.4rem; }
+/* Restart button */
+.wudo-blog-restart-button { display: inline-block; margin-top: 1rem; padding: 0.6rem 1.5rem; background: transparent; border: 2px solid var(--accent, #2d2d2d); color: var(--accent, #2d2d2d); border-radius: 8px; cursor: pointer; font-weight: 600; transition: all 0.2s ease; }
+.wudo-blog-restart-button:hover { background: var(--accent, #2d2d2d); color: #fff; }
+
+/* Footer / Sources */
+.wudo-blog-footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border, #e2e8f0); font-size: 0.85em; opacity: 0.7; }
+.wudo-blog-sources { margin-top: 2rem; padding: 1rem 1.5rem; background: var(--bg-card, rgba(0,0,0,0.03)); border-radius: 12px; font-size: 0.85em; }
+.wudo-blog-sources ol { padding-left: 1.5rem; }
+.wudo-blog-sources li { margin-bottom: 0.3rem; }
+
+/* Sources Trust Table — Trust Score column hidden by default */
+.wudo-blog-sources-table { margin: 2.5rem 0; }
+.wudo-blog-sources-table table { width: 100%; border-collapse: collapse; font-size: 0.9em; }
+.wudo-blog-sources-table th { background: var(--primary, #1a1a1a); color: #fff; padding: 0.6rem 0.75rem; text-align: left; font-weight: 600; font-size: 0.85em; }
+.wudo-blog-sources-table td { padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border, #e2e8f0); vertical-align: middle; }
+.wudo-blog-sources-table tr:hover { background: var(--bg-card, rgba(0,0,0,0.03)); }
+/* Hide Trust Score column (3rd column) and badges — these are internal quality signals, not for readers */
+.wudo-blog-sources-table th:nth-child(3), .wudo-blog-sources-table td:nth-child(3) { display: none !important; }
+.wudo-blog-trust-badge { display: none !important; }
+[data-label="Trust Score"] { display: none !important; }
+
+/* Labels */
+.wudo-blog-label { font-size: 0.75em; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.25rem 0.75rem; border-radius: 20px; background: var(--primary, #1a1a1a); color: #fff; display: inline-block; }
+
+/* Images */
+.wudo-blog-image-container { margin: 1.5rem 0; border-radius: 12px; overflow: hidden; }
+.wudo-blog-image-container img { width: 100%; height: auto; display: block; }
+.wudo-blog-image-caption { font-size: 0.85em; text-align: center; padding: 0.5rem; opacity: 0.7; }
+.wudo-blog-hero-image { width: 100%; border-radius: 16px; margin-bottom: 1.5rem; }
+
+/* Desktop paper look — gives blog a card-like centered appearance */
+@media (min-width: 769px) {
+  .wudo-blog-container, .wudo-blog-article { padding: 2.5rem 3rem; background: var(--bg, #ffffff); border: 1px solid var(--border, #e2e8f0); border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .wudo-blog-container, .wudo-blog-article { padding: 0; }
+  .wudo-blog-stats-grid { grid-template-columns: 1fr; }
+  .wudo-blog-product-grid { grid-template-columns: 1fr; }
+  .wudo-blog-pull-quote, .wudo-blog-quote { font-size: 1.1em; padding: 1rem 1.25rem; }
+  .wudo-blog-stat-number { font-size: 2rem; }
+  /* Mobile stacked card layout for tables */
+  .wudo-blog-table-wrapper { border: none; }
+  .wudo-blog-data-table, .wudo-blog-comparison-table { border: none; }
+  .wudo-blog-data-table thead, .wudo-blog-comparison-table thead { display: none; }
+  .wudo-blog-data-table tr, .wudo-blog-comparison-table tr { display: block; margin-bottom: 1rem; border: 1px solid var(--border, #e2e8f0); border-radius: 10px; padding: 0.75rem; background: var(--bg-card, rgba(0,0,0,0.03)); }
+  .wudo-blog-data-table td, .wudo-blog-comparison-table td { display: block; text-align: right; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border, rgba(0,0,0,0.05)); font-size: 0.9em; }
+  .wudo-blog-data-table td:last-child, .wudo-blog-comparison-table td:last-child { border-bottom: none; }
+  .wudo-blog-data-table td::before, .wudo-blog-comparison-table td::before { content: attr(data-label); float: left; font-weight: 600; text-transform: uppercase; font-size: 0.75em; letter-spacing: 0.03em; opacity: 0.7; }
+  .wudo-blog-faq-question, .faq-question { padding: 0.85rem 1rem; font-size: 0.95em; }
+  /* Interactive element mobile */
+  .wudo-blog-interactive-element { padding: 1.25rem; }
+  .wudo-blog-options-grid { grid-template-columns: 1fr; }
+  .wudo-blog-option-card { padding: 1rem; }
+  .wudo-blog-interactive-intro-heading { font-size: 1.2em; }
+}
+/* === End Base Styles === */
+
+/* CSS Variables */
+        .blog-content {
+            --primary: #FFFFFF;
+            --secondary: #333333;
+            --accent: #FFFFFF;
+            --bg: #000000;
+            --text: #1a1a1a; /* Adjusted for contrast on dark background */
+            --heading-font: 'Inter', sans-serif;
+            --body-font: 'Inter', sans-serif;
+            --border-radius: 8px;
+            --spacing-unit: 1.5rem;
+        }
+
+        /* Base Styles */
+        .blog-content {
+            scroll-behavior: smooth;
+        }
+
+        .blog-content {
+            font-family: var(--body-font);
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .blog-content {
+            max-width: 780px;
+            width: 100%;
+            padding: var(--spacing-unit) 0;
+        }
+
+        @media (max-width: 768px) {
+            .blog-content {
+                font-size: 17px;
+                line-height: 1.75;
+            }
+            .blog-content {
+                padding: 0; /* CMS outer container handles padding */
+            }
+        }
+
+        /* Headings */
+        .blog-content h2, .blog-content h3, .blog-content h4{
+            font-family: var(--heading-font);
+            font-weight: 700;
+            color: var(--accent);
+            line-height: 1.3;
+            margin-top: calc(2 * var(--spacing-unit));
+            margin-bottom: var(--spacing-unit);
+        }
+
+        .blog-content h2{
+            font-size: 2em; /* 32px */
+            margin-top: calc(3 * var(--spacing-unit));
+            letter-spacing: -0.02em;
+        }
+
+        .blog-content h3{
+            font-size: 1.5em; /* 24px */
+            letter-spacing: -0.01em;
+            color: var(--primary);
+        }
+
+        .blog-content h4{
+            font-size: 1.25em; /* 20px */
+            color: var(--text);
+        }
+
+        @media (max-width: 768px) {
+            .blog-content h2{
+                font-size: 1.8em; /* 30.6px */
+                padding: 0 var(--spacing-unit);
+            }
+            .blog-content h3{
+                font-size: 1.4em; /* 23.8px */
+                padding: 0 var(--spacing-unit);
+            }
+            .blog-content h4{
+                font-size: 1.15em; /* 19.55px */
+                padding: 0 var(--spacing-unit);
+            }
+        }
+
+        .blog-content p{
+            margin-bottom: 1em;
+        }
+
+        .blog-content strong{
+            font-weight: 600;
+        }
+
+        .blog-content em{
+            font-style: italic;
+        }
+
+        /* Links */
+        .blog-content a{
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s ease, border-bottom-color 0.3s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 1px;
+        }
+
+        .blog-content a:hover {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        /* Lists */
+        .blog-content ul, .blog-content ol{
+            margin: var(--spacing-unit) 0;
+            padding-left: 1.5rem;
+        }
+
+        ul li, ol li {
+            margin-bottom: 0.5em;
+            padding-left: 0.5em;
+        }
+
+        /* Images */
+        .wudo-blog-hero-image {
+            width: 100vw;
+            height: auto;
+            max-height: 500px;
+            object-fit: cover;
+            margin-bottom: calc(2 * var(--spacing-unit));
+            display: block;
+        }
+
+        .wudo-blog-content-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            margin: var(--spacing-unit) 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .wudo-blog-content-image {
+                border-radius: 0;
+            }
+            .wudo-blog-hero-image {
+                max-height: 300px;
+                margin-bottom: var(--spacing-unit);
+            }
+        }
+
+        /* Key Takeaways */
+        .wudo-blog-key-takeaways {
+            background-color: var(--secondary);
+            border-left: 5px solid var(--accent);
+            padding: var(--spacing-unit);
+            margin: calc(2 * var(--spacing-unit)) 0;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .wudo-blog-key-takeaways h3 {
+            color: var(--accent);
+            margin-top: 0;
+            margin-bottom: 0.8em;
+            font-size: 1.3em;
+            padding: 0;
+        }
+        .wudo-blog-key-takeaways ul {
+            list-style: disc;
+            padding-left: 1.2rem;
+            margin: 0;
+        }
+        .wudo-blog-key-takeaways li {
+            margin-bottom: 0.5em;
+            font-size: 0.95em;
+        }
+
+        /* Table of Contents */
+        .wudo-blog-toc {
+            background-color: var(--secondary);
+            padding: var(--spacing-unit);
+            margin: calc(2 * var(--spacing-unit)) 0;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .wudo-blog-toc h3 {
+            color: var(--accent);
+            margin-top: 0;
+            margin-bottom: var(--spacing-unit);
+            font-size: 1.3em;
+            padding: 0;
+        }
+        .wudo-blog-toc ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .wudo-blog-toc li {
+            margin-bottom: 0.7em;
+        }
+        .wudo-blog-toc a {
+            color: var(--text);
+            text-decoration: none;
+            border-bottom: none;
+            transition: color 0.3s ease;
+        }
+        .wudo-blog-toc a:hover {
+            color: var(--primary);
+        }
+        @media (max-width: 768px) {
+            .wudo-blog-key-takeaways, .wudo-blog-toc {
+                margin: var(--spacing-unit) 0;
+                padding: calc(var(--spacing-unit) * 0.75);
+                border-radius: 0;
+            }
+        }
+
+        /* Callout Boxes */
+        .wudo-blog-callout {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid var(--primary);
+            padding: var(--spacing-unit);
+            margin: calc(2 * var(--spacing-unit)) 0;
+            border-radius: var(--border-radius);
+            font-style: italic;
+            position: relative;
+            overflow: hidden;
+        }
+        .wudo-blog-callout::before {
+            content: '💡';
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            font-size: 2em;
+            opacity: 0.2;
+        }
+        .wudo-blog-callout p {
+            padding-left: 30px; /* Make space for the icon */
+            margin: 0;
+        }
+        @media (max-width: 768px) {
+            .wudo-blog-callout {
+                border-radius: 0;
+                margin: var(--spacing-unit) 0;
+                padding: calc(var(--spacing-unit) * 0.75);
+            }
+        }
+
+        /* Stat Cards */
+        .wudo-blog-stat-card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-unit);
+            margin: calc(2 * var(--spacing-unit)) 0;
+        }
+        .wudo-blog-stat-card {
+            background-color: var(--secondary);
+            padding: var(--spacing-unit);
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        .wudo-blog-stat-card::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, var(--accent) 0%, rgba(255, 255, 255, 0.1) 100%);
+            border-radius: 50%;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        .wudo-blog-stat-card .wudo-blog-stat-number {
+            font-size: 3em;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 0.2em;
+            position: relative;
+            z-index: 1;
+        }
+        .wudo-blog-stat-card .wudo-blog-stat-label {
+            font-size: 1.1em;
+            color: var(--text);
+            margin-bottom: 0.5em;
+            position: relative;
+            z-index: 1;
+        }
+        .wudo-blog-stat-card .wudo-blog-stat-source {
+            font-size: 0.85em;
+            color: rgba(255, 255, 255, 0.6);
+            position: relative;
+            z-index: 1;
+            display: block;
+            margin-top: 0.5em;
+        }
+        @media (max-width: 768px) {
+            .wudo-blog-stat-card-grid {
+                grid-template-columns: 1fr;
+                gap: calc(var(--spacing-unit) * 0.75);
+                margin: var(--spacing-unit) 0;
+            }
+            .wudo-blog-stat-card {
+                border-radius: 0;
+            }
+        }
+
+        /* Pull Quote */
+        .wudo-blog-pull-quote {
+            margin: calc(3 * var(--spacing-unit)) 0;
+            padding: var(--spacing-unit) calc(var(--spacing-unit) * 1.5);
+            background-color: var(--secondary);
+            border-left: 8px solid var(--accent);
+            font-size: 1.6em;
+            font-style: italic;
+            text-align: center;
+            border-radius: var(--border-radius);
+            position: relative;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+        .wudo-blog-pull-quote::before, .wudo-blog-pull-quote::after {
+            content: '“';
+            position: absolute;
+            font-size: 6em;
+            color: rgba(255, 255, 255, 0.1);
+            line-height: 0.5;
+            z-index: 0;
+        }
+        .wudo-blog-pull-quote::before {
+            top: 0.1em;
+            left: 0.1em;
+        }
+        .wudo-blog-pull-quote::after {
+            content: '”';
+            bottom: 0.1em;
+            right: 0.1em;
+        }
+        .wudo-blog-pull-quote p {
+            margin: 0;
+            position: relative;
+            z-index: 1;
+            color: var(--primary);
+        }
+        .wudo-blog-pull-quote .wudo-blog-quote-author {
+            display: block;
+            margin-top: 1em;
+            font-size: 0.6em;
+            color: rgba(255, 255, 255, 0.7);
+            font-style: normal;
+            font-weight: 500;
+        }
+        @media (max-width: 768px) {
+            .wudo-blog-pull-quote {
+                font-size: 1.2em;
+                margin: calc(2 * var(--spacing-unit)) 0;
+                padding: var(--spacing-unit);
+                border-radius: 0;
+            }
+        }
+
+        /* Section Divider */
+        .wudo-blog-section-divider {
+            height: 3px;
+            background: linear-gradient(to right, var(--accent), var(--secondary), var(--accent));
+            border: none;
+            margin: calc(4 * var(--spacing-unit)) auto;
+            width: 70%;
+            opacity: 0.5;
+            border-radius: 2px;
+        }
+        @media (max-width: 768px) {
+            .wudo-blog-section-divider {
+                width: 90%;
+                margin: calc(2 * var(--spacing-unit)) auto;
+            }
+        }
+
+        /* Data Table */
+        .wudo-blog-table-container {
+            margin: calc(2 * var(--spacing-unit)) 0;
+            overflow-x: auto;
+            background-color: var(--secondary);
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .wudo-blog-data-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+        .wudo-blog-data-table th, .wudo-blog-data-table td {
+            padding: var(--spacing-unit);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .wudo-blog-data-table th {
+            background-color: var(--accent);
+            color: var(--secondary) !important;
+            font-weight: 600;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+            position: sticky;
+            top: 0;
+        }
+        .wudo-blog-data-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+        .wudo-blog-data-table td {
+            font-size: 0.95em;
+            color: var(--text);
+        }
+        .wudo-blog-data-table tbody tr:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Mobile Table Stacked Layout */
+        @media (max-width: 768px) {
+            .wudo-blog-table-container {
+                border-radius: 0;
+                margin: var(--spacing-unit) 0;
+            }
+            .wudo-blog-data-table thead {
+                display: none;
+            }
+            .wudo-blog-data-table tr {
+                display: block;
+                margin-bottom: var(--spacing-unit);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: var(--border-radius);
+                overflow: hidden;
+            }
+            .wudo-blog-data-table td {
+                display: block;
+                text-align: right;
+                padding-left: 50%;
+                position: relative;
+                border-bottom: none;
+            }
+            .wudo-blog-data-table td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: var(--spacing-unit);
+                width: calc(50% - var(--spacing-unit));
+                text-align: left;
+                font-weight: 600;
+                color: var(--accent);
+            }
+            .wudo-blog-data-table tr:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        /* Key Sources & Trust Table */
+        .wudo-blog-sources-table h3 {
+            text-align: center;
+            margin-bottom: var(--spacing-unit);
+        }
+        .wudo-blog-trust-badge {
+            display: inline-block;
+            padding: 0.3em 0.7em;
+            border-radius: 4px;
+            font-size: 0.8em;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: var(--secondary);
+        }
+        .wudo-blog-trust-high { background-color: #38C172; } /* Green */
+        .wudo-blog-trust-good { background-color: #FFC107; } /* Yellow */
+        .wudo-blog-trust-moderate { background-color: #6C757D; } /* Grey */
+        .wudo-blog-trust-low { background-color: #DC3545; } /* Red */
+
+        /* FAQ Section */
+        .wudo-blog-faq-section {
+            margin: calc(4 * var(--spacing-unit)) 0;
+        }
+        .wudo-blog-faq-section h2 {
+            text-align: center;
+        }
+        .wudo-blog-faq-item {
+            background-color: var(--secondary);
+            border-radius: var(--border-radius);
+            margin-bottom: var(--spacing-unit);
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .wudo-blog-faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing-unit);
+            background-color: var(--secondary);
+            color: var(--primary);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1em;
+            border: none;
+            width: 100%;
+            text-align: left;
+            transition: background-color 0.3s ease;
+        }
+        .wudo-blog-faq-question:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .wudo-blog-faq-question .wudo-blog-icon {
+            font-size: 1.5em;
+            line-height: 1;
+            transition: transform 0.3s ease;
+        }
+        .wudo-blog-faq-question.active .wudo-blog-icon {
+            transform: rotate(180deg);
+        }
+        .wudo-blog-faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+            padding: 0 var(--spacing-unit);
+            color: var(--text);
+        }
+        .wudo-blog-faq-answer.open {
+            max-height: 500px; /* Arbitrarily large value for expansion */
+            padding-bottom: var(--spacing-unit);
+        }
+        .wudo-blog-faq-answer p {
+            margin-top: 0;
+            margin-bottom: 1em;
+        }
+        @media (max-width: 768px) {
+            .wudo-blog-faq-section {
+                margin: calc(2 * var(--spacing-unit)) 0;
+            }
+            .wudo-blog-faq-item {
+                border-radius: 0;
+                margin-bottom: calc(var(--spacing-unit) * 0.75);
+            }
+            .wudo-blog-faq-question {
+                padding: calc(var(--spacing-unit) * 0.75);
+                font-size: 1em;
+            }
+        }
+
+        /* CTA Section */
+        .wudo-blog-cta-section {
+            background: linear-gradient(135deg, var(--secondary) 0%, rgba(255, 255, 255, 0.1) 100%);
+            padding: calc(3 * var(--spacing-unit));
+            margin: calc(4 * var(--spacing-unit)) 0;
+            text-align: center;
+            border-radius: var(--border-radius);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .wudo-blog-cta-section h3 {
+            color: var(--accent);
+            font-size: 2em;
+            margin-bottom: var(--spacing-unit);
+            padding: 0;
+        }
+        .wudo-blog-cta-section p {
+            font-size: 1.1em;
+            margin-bottom: calc(1.5 * var(--spacing-unit));
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            color: var(--primary);
+        }
+        .wudo-blog-button {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--secondary) !important; /* Force dark text on light accent */
+            padding: 0.9em 2em;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .wudo-blog-button:hover {
+            transform: translateY(-3px);
+            background-color: var(--primary);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+        }
+        @media (max-width: 768px) {
+            .wudo-blog-cta-section {
+                margin: calc(2 * var(--spacing-unit)) 0;
+                padding: calc(var(--spacing-unit) * 1.5);
+                border-radius: 0;
+            }
+            .wudo-blog-cta-section h3 {
+                font-size: 1.5em;
+            }
+            .wudo-blog-cta-section p {
+                font-size: 1em;
+            }
+            .wudo-blog-button {
+                padding: 0.8em 1.5em;
+                font-size: 0.9em;
+            }
+        }
+
+        /* Author Line */
+        .wudo-blog-author {
+            text-align: center;
+            margin-top: calc(3 * var(--spacing-unit));
+            font-size: 0.9em;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: calc(2 * var(--spacing-unit));
+        }
+        .wudo-blog-author a {
+            color: rgba(255, 255, 255, 0.8);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        .wudo-blog-author a:hover {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        /* PDF Download Button */
+        .wudo-blog-download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5em;
+            background-color: var(--primary);
+            color: var(--secondary) !important;
+            padding: 0.4em 1em;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-decoration: none;
+            border-bottom: none;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .wudo-blog-download-btn:hover {
+            background-color: var(--accent);
+            transform: translateY(-1px);
+        }
+        .wudo-blog-download-btn::before {
+            content: '⬇️';
+            font-size: 1em;
+        }
+
+        /* Interactive Element Styles */
+        .wudo-blog-interactive-wrapper {
+            background-color: var(--secondary);
+            padding: calc(2 * var(--spacing-unit));
+            margin: calc(4 * var(--spacing-unit)) 0;
+            border-radius: var(--border-radius);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        .wudo-blog-interactive-wrapper h3 {
+            color: var(--primary);
+            font-size: 1.8em;
+            margin-top: 0;
+            text-align: center;
+            padding: 0;
+        }
+        .wudo-blog-interactive-wrapper p {
+            text-align: center;
+            margin-bottom: calc(1.5 * var(--spacing-unit));
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .wudo-blog-interactive-step {
+            display: none;
+            animation: fadeIn 0.5s ease-out;
+            padding: var(--spacing-unit) 0;
+        }
+        .wudo-blog-interactive-step.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .wudo-blog-progress-bar-container {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            height: 8px;
+            margin-bottom: calc(2 * var(--spacing-unit));
+        }
+        .wudo-blog-progress-bar {
+            height: 100%;
+            width: 0%;
+            background-color: var(--accent);
+            border-radius: 5px;
+            transition: width 0.4s ease-in-out;
+        }
+        .wudo-blog-question-label {
+            font-weight: 600;
+            margin-bottom: var(--spacing-unit);
+            display: block;
+            font-size: 1.1em;
+            text-align: center;
+        }
+        .wudo-blog-option-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: var(--spacing-unit);
+            margin-top: var(--spacing-unit);
+        }
+        .wudo-blog-option-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: var(--spacing-unit);
+            border-radius: var(--border-radius);
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 120px;
+        }
+        .wudo-blog-option-card:hover {
+            border-color: var(--primary);
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+        .wudo-blog-option-card.selected {
+            border-color: var(--accent);
+            background-color: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+        .wudo-blog-option-card span {
+            font-weight: 500;
+            color: var(--primary);
+        }
+        .wudo-blog-navigation-buttons {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: calc(2 * var(--spacing-unit));
+            gap: var(--spacing-unit);
+        }
+        .wudo-blog-navigation-buttons button {
+            background-color: var(--accent);
+            color: var(--secondary) !important;
+            padding: 0.8em 1.8em;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+        }
+        .wudo-blog-navigation-buttons button:disabled {
+            background-color: rgba(255, 255, 255, 0.3);
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        .wudo-blog-navigation-buttons button:hover:not(:disabled) {
+            transform: translateY(-2px);
+            background-color: var(--primary);
+        }
+        .wudo-blog-result-screen h4 {
+            font-size: 1.8em;
+            color: var(--accent);
+            text-align: center;
+            margin-bottom: var(--spacing-unit);
+            padding: 0;
+        }
+        .wudo-blog-result-screen p {
+            font-size: 1.1em;
+            text-align: center;
+            margin-bottom: var(--spacing-unit);
+            color: var(--primary);
+        }
+        .wudo-blog-result-recommendation {
+            background-color: rgba(255, 255, 255, 0.08);
+            padding: var(--spacing-unit);
+            border-radius: var(--border-radius);
+            margin-top: calc(1.5 * var(--spacing-unit));
+            text-align: left;
+            border-left: 4px solid var(--accent);
+        }
+        .wudo-blog-result-recommendation h5 {
+            color: var(--accent);
+            margin-top: 0;
+            margin-bottom: 0.5em;
+            font-size: 1.2em;
+        }
+        .wudo-blog-result-recommendation ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .wudo-blog-result-recommendation li {
+            margin-bottom: 0.5em;
+        }
+        .wudo-blog-restart-button {
+            background-color: var(--secondary);
+            color: var(--primary) !important;
+            border: 1px solid var(--primary);
+            margin-top: calc(2 * var(--spacing-unit));
+        }
+        .wudo-blog-restart-button:hover:not(:disabled) {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .wudo-blog-insight {
+            background-color: rgba(255, 255, 255, 0.03);
+            border-left: 3px solid var(--primary);
+            padding: 0.8em 1.2em;
+            margin-top: var(--spacing-unit);
+            border-radius: var(--border-radius);
+            font-size: 0.9em;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.7);
+            display: none; /* Hidden by default */
+            animation: fadeIn 0.4s ease-out;
+        }
+        .wudo-blog-insight.active {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .wudo-blog-interactive-wrapper {
+                margin: var(--spacing-unit) 0;
+                padding: calc(var(--spacing-unit) * 1.5);
+                border-radius: 0;
+            }
+            .wudo-blog-option-grid {
+                grid-template-columns: 1fr;
+            }
+            .wudo-blog-navigation-buttons {
+                justify-content: space-between;
+            }
+            .wudo-blog-question-label {
+                text-align: left;
+            }
+        }
+
+/* === Wudo Safety Rules (must be last — do NOT remove) === */
+/* FAQ: prevent duplicate arrows. AI sometimes adds both an inline <span> arrow AND a CSS ::after/::before arrow. */
+.wudo-blog-faq-question::after, .faq-question::after { content: none !important; display: none !important; }
+.wudo-blog-faq-question::before, .faq-question::before { content: none !important; display: none !important; }
+
+/* Fade-in: ALL content visible by default. The AI may generate .fade-in-section with
+   opacity:0 expecting IntersectionObserver JS — but on SPA client-side navigation the JS
+   may not re-execute, leaving content permanently hidden. Force everything visible. */
+.wudo-blog-fade-in, .fade-in-section { opacity: 1 !important; transform: none !important; transition: none !important; }
+
+/* Scope guard: QA agent and blog CSS must NEVER affect elements outside .blog-content */
+.blog-content .wudo-blog-button, .blog-content .wudo-blog-cta-button { /* scoped — no leak to nav/footer */ }
+/* === End Safety Rules === */
+
+
+/* === WCAG Contrast Safety (auto-enforced) === */
+.blog-content { color: #F5F5F5 !important; }
+.blog-content p, .blog-content li, .blog-content span { color: #F5F5F5 !important; }
+.blog-content h1, .blog-content h2, .blog-content h3, .blog-content h4 { color: #F5F5F5 !important; }
+.blog-content .wudo-blog-button,
+.blog-content .wudo-blog-cta,
+.blog-content button[class*="wudo-blog"],
+.blog-content a[class*="wudo-blog-cta"],
+.blog-content a[class*="wudo-blog-button"]:not(.wudo-blog-download-btn) {
+  color: #1A1A1A !important;
+  background-color: #FFFFFF !important;
+}
+.blog-content .wudo-blog-download-btn {
+  color: var(--primary, #2563EB) !important;
+  background: none !important;
+  text-decoration: underline !important;
+  font-weight: 600 !important;
+  padding: 0 !important;
+  border: none !important;
+}
